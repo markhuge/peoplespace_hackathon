@@ -17,6 +17,30 @@ body {
 }
 
 .celeb-pic {
-    height: 200px;
-    width: 200px;
+  height: 200px;
+  width: 200px;
+}
+
+@media (max-width:768px) {
+	.navbar-toggle {
+		display:none;
+	}
+}
+
+@media (max-width:420px) {
+	.media.ng-scope {
+		float:left;
+		width:100%;
+	}
+
+	.media-object {
+		margin:0 auto;
+	}
+	.pull-left img {
+		text-align:center;
+	}
+	.pull-left, .media-body {
+		text-align:center;
+		width:100%;
+	}
 }
