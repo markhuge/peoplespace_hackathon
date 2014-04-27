@@ -13,7 +13,6 @@ class Twitter
   get: (username, callback) ->
     twitter.get 'users/show', screen_name: username, (err ,data) ->
       if err then return callback err
-      console.log data
       callback null, _.pick(data, ["name","friends_count","followers_count","friends_count","listed_count","screen_name","profile_image_url"])
       
 
