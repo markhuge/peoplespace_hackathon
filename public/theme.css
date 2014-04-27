@@ -1,6 +1,12 @@
 @charset "UTF-8";
 /* CSS Document */
 
+/* Clearfix */
+
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+
+.clearfix:after { clear: both; }
+
 body {
   padding-top: 70px;
   padding-bottom: 30px;
@@ -21,10 +27,12 @@ body {
   width: 200px;
 }
 
-@media (max-width:768px) {
-	.navbar-toggle {
-		display:none;
-	}
+.form-twitter-handle, .media-list {
+	margin-bottom: 30px;
+}
+
+.pull-left {
+	margin-bottom:10px;
 }
 
 @media (max-width:420px) {
