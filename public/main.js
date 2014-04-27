@@ -1,9 +1,9 @@
 // JavaScript Document
 
-var appHackNite =  angular.module('appHackNite',['mgcrea.ngStrap', 'infinite-scroll']);
+var appHackNite = angular.module('appHackNite', ['infinite-scroll']);
 
-app.controller("appHackNiteCtrl", function($scope, Reddit) {
-	$scope.reddit = new Reddit();
+appHackNite.controller('appHackNiteCtrl', function($scope, Reddit) {
+  $scope.reddit = new Reddit();
 });
 
 // Reddit constructor function to encapsulate HTTP and pagination logic
