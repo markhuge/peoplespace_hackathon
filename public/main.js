@@ -7,7 +7,7 @@ celebrityApp.controller ("CelebrityHalflifeController", function($scope, $http) 
 	})
 
 	$scope.currentPage = 0;
-    $scope.pageSize = 10;
+    $scope.pageSize = 2;
     //$scope.data = [];
     $scope.numberOfPages=function(){
         return Math.ceil($scope.celebs.length/$scope.pageSize);
