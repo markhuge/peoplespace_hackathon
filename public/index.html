@@ -10,11 +10,12 @@
     <script type="text/javascript" src="main.js"></script>
 </head>
 <body ng-controller='CelebrityHalflifeController'>
-    <h1>IT WORKS</h1>
-    <h2>{{test}}</h2>
+    <h1>Celebrity Halflife</h1>
       <ul class="celebs">
-          <li ng-repeat="celeb in celebs">
-            <p>{{celeb.name}}</p>
+          <li ng-repeat="celeb in celebs" class="celeb-item">
+            <h3 class="celeb-name">{{celeb.name}}</h3>
+            <img src="{{celeb.pic}}"></img>
+            <h4 class="halflife">Half-life: {{celeb.score}}</h4>
           </li>
         </ul>
 </body>
