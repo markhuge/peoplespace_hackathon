@@ -51,15 +51,22 @@
   </div>
 </div>
 <div class="container theme-showcase" role="main">
-  <ul class="media-list">
-    <li class="media" ng-repeat='celeb in celebs'> <a class="pull-left">
-      <img class="media-object celeb-pic" src="{{celeb.pic}}" alt="{{celeb.name}}"> </a>
-      <div class="media-body">
-        <h4 class="media-heading celeb-name">{{celeb.name}}</h4>
-        <span class='celeb-score'>Celebrity Halflife: {{celeb.score}}</span>
-<!--         <span class='title'> <a ng-href='Twitter Link' target='_blank'>{{celeb.name}}</a> </span> </div> -->
-    </li>
-  </ul>
+    <ul class="media-list">
+        <li class="media" ng-repeat='celeb in celebs | startFrom:currentPage*pageSize | limitTo:pageSize'> <a class="pull-left">
+          <img class="media-object celeb-pic" src="{{celeb.pic}}" alt="{{celeb.name}}"> </a>
+          <div class="media-body">
+            <h4 class="media-heading celeb-name">{{celeb.name}}</h4>
+            <span class='celeb-score'>Celebrity Halflife: {{celeb.score}}</span>
+    <!--         <span class='title'> <a ng-href='Twitter Link' target='_blank'>{{celeb.name}}</a> </span> </div> -->
+        </li>
+    </ul>
+    <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+        Previous
+    </button>
+    {{currentPage+1}}/{{numberOfPages()}}
+    <button ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage=currentPage+1">
+        Next
+    </button>
 </div>
 <!-- /container -->
 
