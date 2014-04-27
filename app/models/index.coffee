@@ -1,0 +1,1 @@
+@celebs = require './celebs'

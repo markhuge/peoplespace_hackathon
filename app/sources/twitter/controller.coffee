@@ -13,7 +13,7 @@ class Twitter
   get: (username, callback) ->
     twitter.get 'users/show', screen_name: username, (err ,data) ->
       if err then return callback err
-      callback null, _.pick(data, ["followers_count","friends_count","listed_count","screen_name","profile_image_url"])
+      callback null, _.pick(data, ["friends_count","followers_count","friends_count","listed_count","screen_name","profile_image_url"])
       
 
 module.exports = new Twitter
