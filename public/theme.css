@@ -15,3 +15,8 @@ body {
 .theme-showcase > p > .btn {
   margin: 5px 0;
 }
+
+.celeb-pic {
+    height: 200px;
+    width: 200px;
+}

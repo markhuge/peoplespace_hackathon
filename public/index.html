@@ -30,7 +30,7 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
       <a class="navbar-brand" href="#">Celebrity Half-life</a> </div>
     <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
+<!--       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -45,34 +45,36 @@
             <li><a href="#">One more separated link</a></li>
           </ul>
         </li>
-      </ul>
+      </ul> -->
     </div>
-    <!--/.nav-collapse --> 
+    <!--/.nav-collapse -->
   </div>
 </div>
 <div class="container theme-showcase" role="main">
   <ul class="media-list">
-    <li class="media" ng-repeat='celeb in celebs'> <a class="pull-left" href="#"> <img class="media-object" src="{{celeb.pic}}" alt="{{celeb.name}}"> </a>
+    <li class="media" ng-repeat='celeb in celebs'> <a class="pull-left">
+      <img class="media-object celeb-pic" src="{{celeb.pic}}" alt="{{celeb.name}}"> </a>
       <div class="media-body">
-        <h4 class="media-heading">{{celeb.name}}</h4>
-        <span class='score'>{{celeb.score}}</span> <span class='title'> <a ng-href='{{celeb.name}}' target='_blank'>{{celeb.name}}</a> </span> </div>
+        <h4 class="media-heading celeb-name">{{celeb.name}}</h4>
+        <span class='celeb-score'>Celebrity Halflife: {{celeb.score}}</span>
+<!--         <span class='title'> <a ng-href='Twitter Link' target='_blank'>{{celeb.name}}</a> </span> </div> -->
     </li>
   </ul>
 </div>
-<!-- /container --> 
+<!-- /container -->
 
 <!-- Bootstrap core JavaScript
-    ================================================== --> 
-<!-- Placed at the end of the document so the pages load faster --> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
-<script src="bootstrap/dist/js/bootstrap.min.js"></script> 
-<script src="bootstrap/assets/js/docs.min.js"></script> 
-<script type="text/javascript" src="jquery/dist/jquery.min.js"></script> 
-<script type="text/javascript" src="angular/angular.min.js"></script> 
-<script type="text/javascript" src="angular-strap/dist/angular-strap.min.js"></script> 
-<script type="text/javascript" src="angular-strap/dist/angular-strap.tpl.min.js"></script> 
-<script type="text/javascript" src="ngInfiniteScroll/build/ng-infinite-scroll.min.js"></script> 
-<script type="text/javascript" src="main.js"></script> 
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bootstrap/assets/js/docs.min.js"></script>
+<script type="text/javascript" src="jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="angular/angular.min.js"></script>
+<script type="text/javascript" src="angular-strap/dist/angular-strap.min.js"></script>
+<script type="text/javascript" src="angular-strap/dist/angular-strap.tpl.min.js"></script>
+<script type="text/javascript" src="ngInfiniteScroll/build/ng-infinite-scroll.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
 <script type="text/javascript" src="ng-infinite-scroll.min.js"></script>
 </body>
 </html>
