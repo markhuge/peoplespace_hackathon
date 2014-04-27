@@ -12,5 +12,10 @@
 <body ng-controller='CelebrityHalflifeController'>
     <h1>IT WORKS</h1>
     <h2>{{test}}</h2>
+      <ul class="celebs">
+          <li ng-repeat="celeb in celebs">
+            <p>{{celeb.name}}</p>
+          </li>
+        </ul>
 </body>
 </html>
