@@ -51,6 +51,11 @@
   </div>
 </div>
 <div class="container theme-showcase" role="main">
+    <form class="form-twitter-handle" action="api/celebrities" method="post">
+        <label for="twitter-handle">Twitter Handle</label>
+        <input id="twitter-handle" type="text"></input>
+        <input type="submit" value="submit"></submit>
+    </form>
     <ul class="media-list">
         <li class="media" ng-repeat='celeb in celebs | startFrom:currentPage*pageSize | limitTo:pageSize'> <a class="pull-left">
           <img class="media-object celeb-pic" src="{{celeb.pic}}" alt="{{celeb.name}}"> </a>
