@@ -1,8 +1,12 @@
 express = require 'express'
 module.exports = app = express()
+parser = require 'body-parser'
+
+app.use parser.json()
+
+# supppper dirty 
 
 source = require './controller'
-
 
 list = []
 {celebs} = require '../../models' #dirty
@@ -12,9 +16,18 @@ celebs.model.find {}, (err,docs) ->
       list.push data
 
 
+
+
 app.get '/api/celebrities/:username', (req,res) ->
   source.get req.params.username, (err,data) ->
     if err then res.json 500, err else res.json data
   
 app.get '/api/celebrities', (req,res) ->
   res.json list
+
+app.post '/api/celebrities', (req,res) ->
+  source.get req.body.name, (err,doc) ->
+    console.log err,doc
+    if doc then celebs.model.save doc, (err,doc) ->
+      console.log err,doc
+      if doc then res.json doc
