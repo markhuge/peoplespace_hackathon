@@ -8,9 +8,9 @@ mongoose = require 'mongoose'
 twitter  = require './sources/twitter'
 
 api      = require './api'
-  
 
-mongoose.connect 'mongodb://hack:hack1@ds030607.mongolab.com:30607/main'
+
+mongoose.connect process.env.MONGO_CONNECTION_STRING
 
 
 app.use express.static(__dirname + '/../public')
