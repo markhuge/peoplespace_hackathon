@@ -60,7 +60,7 @@
     </form>
     <ul class="media-list clearfix">
         <li class="media" ng-repeat='celeb in celebs | startFrom:currentPage*pageSize | limitTo:pageSize'> <a class="pull-left">
-          <img class="media-object celeb-pic" src="{{celeb.profile_image_url}}" alt="{{celeb.name}}"> </a>
+          <img class="media-object celeb-pic" src="{{celeb.profile_image_url | largeImage }}" alt="{{celeb.name}}"> </a>
           <div class="media-body">
             <h4 class="media-heading celeb-name">{{celeb.name}}</h4>
             <span class='celeb-score'>Celebrity Halflife: {{celeb.score / 200}} days remaining</span>
