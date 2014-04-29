@@ -20,4 +20,4 @@ app.use twitter
 app.use api
 
 
-module.exports = server.listen 8080
+module.exports = server.listen process.env.PORT || 8080
