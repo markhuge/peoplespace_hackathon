@@ -22,6 +22,8 @@ Celebrity Half Life
 
 Celebrity Half Life is an application that attempts to track and calculate how many more days of relevancy a celebrity has left.
 
+[Demo](http://celebrityhalflife.heroku.com/)
+
 ## Usage
 
 `npm install && npm start`
