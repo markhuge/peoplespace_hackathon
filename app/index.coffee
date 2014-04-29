@@ -20,4 +20,4 @@ app.use twitter
 app.use api
 
 
-module.exports = server.listen 3000
+module.exports = server.listen 8080
