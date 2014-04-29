@@ -6,5 +6,5 @@ Schema =
   
 schema = new mongoose.Schema(Schema)
 
-@model = mongoose.model 'masterList', schema
+@model = mongoose.model 'celebrities', schema
 
