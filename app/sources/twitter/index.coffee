@@ -30,11 +30,3 @@ app.get '/api/celebrities/:username', (req,res) ->
   
 app.get '/api/celebrities', (req,res) ->
   res.json list
-
-
-app.post '/api/celebrities', (req,res) ->
-  source.get req.body.name, (err,doc) ->
-    console.log err,doc
-    if doc then celebs.model.save doc, (err,doc) ->
-      console.log err,doc
-      if doc then res.json doc
