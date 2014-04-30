@@ -23,6 +23,6 @@ celebrityApp.filter('startFrom', function() {
 });
 
 
-celebrityApp.filter('largeImage', function(image){
-  return image.replace("_normal","bigger");
+celebrityApp.filter('largeImage', function() { 
+    return function(image){ return image.replace("_normal","") };
 });
